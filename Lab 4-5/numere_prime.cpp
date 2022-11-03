@@ -4,7 +4,7 @@ mici sau egale cu un număr natural n.
 */
 
 #include <cstdio>
-#include <math.h>1
+#include <math.h>
 
 const char *sFile = "numere_prime.txt";
 
