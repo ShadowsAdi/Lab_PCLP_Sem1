@@ -22,7 +22,7 @@ bool bMatchString(char sString[], int iArray[], int iLen)
 	return true;
 }
 
-int iApplyRules(char sString[32], int iLen)
+int iApplyRules(char sString[], int iLen)
 {
 	char String;
 	char PreString;
@@ -94,7 +94,7 @@ int main()
 	// ( X = 88 ) < ( x = 120 )
 	int sArray['x' + 1] = {NULL};
 
-	char sString[32];
+	char sString[] = {};
 
 	scanf("%s", &sString);
 
