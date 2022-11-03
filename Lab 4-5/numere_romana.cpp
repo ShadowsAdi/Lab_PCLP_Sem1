@@ -11,7 +11,7 @@ bool bMatchString(char sString[], int iArray[], int iLen)
 {
 	for (int i = 0; i < iLen; ++i)
 	{
-		sString[i] = toupper(sString[i]);sString[i] = toupper(sString[i]);
+		sString[i] = toupper(sString[i]);
 
 		if(iArray[sString[i]] == (int)NULL)
 		{
