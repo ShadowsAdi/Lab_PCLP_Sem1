@@ -80,12 +80,7 @@ bool bAllow(char cChar, char cPre, char cAntePre, char cPost)
 	if(cPre == 'V' && (cChar == 'X' || cChar == 'L' || cChar == 'C' || cChar == 'D' || cChar == 'M')
 	|| cPre == 'L' && (cChar == 'C' || cChar == 'D' || cChar == 'M')
 	|| cPre == 'D' && cChar == 'M'
-	|| cPre == 'X' && (cChar =='D' || cChar == 'M'))
-	{
-		return false;
-	}
-
-	if(cAntePre == 'I' && cPre == 'I')
+	|| cPre == 'X' && (cChar =='D' || cChar == 'M') || cAntePre == 'I' && cPre == 'I')
 	{
 		return false;
 	}
@@ -136,7 +131,7 @@ int main()
 	}
 	while(i >= 0 && iNumar != -1);
 	
-	printf("Roman Number: %s \nInteger Number: %d%s\n", sString, iNumar != -1 ? (iNumar - iApplyRules(sString, len)) : NULL, iNumar == -1 ? " - Doesn't exist" : "");
+	printf("Roman Number: %s \nInteger Number: %d%s\n", sString, iNumar != -1 ? (iNumar - iApplyRules(sString, len)) : NULL, iNumar == -1 ? " - Is not valid" : "");
 
 	return 0;
 }
